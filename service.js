@@ -10,6 +10,25 @@ if (fs.existsSync("pesanan.json")) {
   menuData.pesanan = JSON.parse(bakar);
 }
 
+// --- nampilin babachan
+
+function tampilMenu() {
+menuData.menu.forEach(element => {
+        console.log(`- (${element.kode}) ${element.nama_menu} - ${element.harga}`); 
+});
+}
+console.log();
+console.log(`--=( Warung BABA CHAN )=--`);
+console.log();
+console.log(`Daftar Menu :`);
+
+tampilMenu();
+
+console.log();
+console.log(`Opsi :`);
+console.log(`1. Pesan`);
+console.log(`2. Daftar pesanan saya`);
+console.log(`3. Keluar`);
 rl.question("Pilih (1/2/3) : ", (pesan) => {
   // console.log(pesan);
 
@@ -33,7 +52,7 @@ rl.question("Pilih (1/2/3) : ", (pesan) => {
       } else {
         console.log("Data tidak ditemukan");
       }
-      rl.close();
+      // rl.close();
     });
   } else if (pesan == "2") {
     if (fs.existsSync("pesanan.json")) {
@@ -57,7 +76,12 @@ rl.question("Pilih (1/2/3) : ", (pesan) => {
       console.log("=========================");
       console.log("Anda belum memesan apapun");
       console.log("=========================");
-
+      console.log();
+      console.log(`Opsi :`);
+      console.log(`1. Pesan`);
+      console.log(`2. Daftar pesanan saya`);
+      console.log(`3. Keluar`);
+      
       rl.close();
     }
   } else if (pesan == "3") {

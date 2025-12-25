@@ -6,6 +6,6 @@ const menu = [
     {id: 5, kode: "EJ", nama_menu: "Es Jeruk Peras", harga: 8000},
 ]
 
-const pesenan = []
+const pesanan = []
 
-module.exports = {menu, pesenan}
+module.exports = {menu, pesanan}

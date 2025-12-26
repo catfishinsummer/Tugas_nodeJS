@@ -94,10 +94,10 @@ rl.question("Pilih (1/2/3) : ", (pesan) => {
   } else if (pesan == "3") {
     fs.unlink("pesanan.json", (err) => {
       if (err) {
-        console.error("Error deleting file:", err);
-        return;
+        rl.close()
       }
-      rl.close();
+        rl.close()
+
     });
-  }
+  } 
 });
